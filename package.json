@@ -1,6 +1,6 @@
 {
   "name": "selfmakeredux",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "babel create es5 package",
   "main": "index.js",
   "directories": {
@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "redux": "^4.0.0",
-    "regenerator-runtime": "^0.11.1"
+    "regenerator-runtime": "^0.11.1",
+    "selfmakeredux": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",

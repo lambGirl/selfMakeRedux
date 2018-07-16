@@ -9,7 +9,7 @@ require("regenerator-runtime/runtime");
 
 var _zoro2 = _interopRequireDefault(require("./lib/zoro"));
 
-var _until = require("./lib/until");
+var _util = require("./lib/util");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -40,7 +40,7 @@ App.prototype.use = function (plugins) {
     return this;
   }
 
-  (0, _until.assert)(plugins instanceof Array, "the use param must be a function or a plugin Array, but we get ".concat(_typeof(plugins)));
+  (0, _util.assert)(plugins instanceof Array, "the use param must be a function or a plugin Array, but we get ".concat(_typeof(plugins)));
   plugins.forEach(function (plugin) {
     return _zoro.use.call(_zoro, plugin);
   });
@@ -62,7 +62,7 @@ App.prototype.setup = function () {
 
 var actions = function actions(namespace) {
   var models = _zoro.models;
-  (0, _until.assert)(!!models[namespace], "the ".concat(namespace, " model not define"));
+  (0, _util.assert)(!!models[namespace], "the ".concat(namespace, " model not define"));
   return models[namespace].getActions();
 };
 
