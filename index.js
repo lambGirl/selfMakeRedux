@@ -27,9 +27,7 @@ App.prototype.model = function (models) {
 
     return this;
   }
-
   _zoro.injectModels.call(_zoro, [models]);
-
   return this;
 };
 
